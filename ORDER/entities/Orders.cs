@@ -42,14 +42,18 @@ namespace ORDER.entities
             sb.Append("Order Moment: ");
             sb.Append(Moment);
             sb.Append(" Order Status: ");
-            sb.Append(Status);
+            sb.Append(Status.ToString());
             sb.AppendLine("Order itens");
+
             foreach(var i in Items){
                 sb.Append(i.Product.Name);
                 sb.Append(", ");
+                sb.Append("Price: ");
                 sb.Append(i.Price);
+                sb.Append(", ");
                 sb.Append(" Quantity: ");
                 sb.Append(i.Quantity);
+                sb.Append(", ");
                 sb.Append(i.SubTotal());
                 sb.AppendLine();
             }
